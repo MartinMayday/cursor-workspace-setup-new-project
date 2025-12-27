@@ -1,0 +1,557 @@
+{
+  "version": "1.0.0",
+  "generated_at": "<PLACEHOLDER: DATE>",
+  "policy": {
+    "evidence_required": true,
+    "notes": [
+      "Entries in this file are authoritative sources used to ground templates and behaviors.",
+      "All non-trivial claims in generated kit docs should cite at least one source URL from this list (or a repo fact excerpt)."
+    ]
+  },
+  "sources": [
+    {
+      "id": "cursor_rules",
+      "title": "Cursor Docs: Rules",
+      "url": "https://docs.cursor.com/context/rules",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Project rules live in .cursor/rules as .mdc files.",
+        "Rules use frontmatter metadata (description, alwaysApply, globs).",
+        "AGENTS.md is supported as a simple alternative and can be nested."
+      ],
+      "use_when": [
+        "Generating .cursor/rules content",
+        "Deciding between AGENTS.md and rules files",
+        "Validating rule file format"
+      ]
+    },
+    {
+      "id": "cursor_commands",
+      "title": "Cursor Docs: Commands",
+      "url": "https://cursor.com/docs/agent/chat/commands",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Project commands live in .cursor/commands as plain Markdown files.",
+        "Commands can also be global (~/.cursor/commands) or team-managed.",
+        "Commands support slash-command syntax for quick access."
+      ],
+      "use_when": [
+        "Generating slash commands for Cursor",
+        "Validating command placement and format"
+      ]
+    },
+    {
+      "id": "cursor_ignore",
+      "title": "Cursor Docs: Ignore files",
+      "url": "https://docs.cursor.com/context/ignore",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        ".cursorignore works like .gitignore for context exclusion.",
+        "Use to exclude generated files, node_modules, build artifacts."
+      ],
+      "use_when": [
+        "Configuring context exclusion",
+        "Optimizing context window usage"
+      ]
+    },
+    {
+      "id": "claude_code_docs",
+      "title": "Claude Code Documentation",
+      "url": "https://claude.ai/code",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Claude Code provides AI-powered code generation and assistance.",
+        "Follows similar patterns to Cursor IDE for workspace configuration.",
+        "Supports context-aware code generation with file references."
+      ],
+      "use_when": [
+        "Using Claude for code generation",
+        "Understanding AI coding assistant patterns",
+        "Cross-referencing Cursor and Claude workflows"
+      ]
+    },
+    {
+      "id": "claude_agents_sdk",
+      "title": "Claude Agents SDK",
+      "url": "https://docs.anthropic.com/claude/docs/agents",
+      "type": "sdk",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Claude Agents SDK enables building AI agents with tool use.",
+        "Supports function calling and structured outputs.",
+        "Agents can interact with external APIs and services."
+      ],
+      "use_when": [
+        "Building AI agents with Claude",
+        "Implementing tool use patterns",
+        "Creating agent workflows"
+      ]
+    },
+    {
+      "id": "opencode_docs",
+      "title": "OpenCode Documentation",
+      "url": "https://opencode.dev/",
+      "type": "official_docs",
+      "trust_level": "medium",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "OpenCode provides open-source coding assistant capabilities.",
+        "Supports multiple AI models and coding patterns."
+      ],
+      "use_when": [
+        "Exploring open-source coding assistant options",
+        "Understanding coding assistant architectures"
+      ]
+    },
+    {
+      "id": "docker_docs",
+      "title": "Docker Documentation",
+      "url": "https://docs.docker.com/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Docker Compose for multi-container applications.",
+        "Use container names for inter-service communication.",
+        "Health checks recommended for all services.",
+        "Networks enable service isolation and communication."
+      ],
+      "use_when": [
+        "Configuring Docker Compose",
+        "Setting up service communication",
+        "Implementing health checks",
+        "Designing container networking"
+      ]
+    },
+    {
+      "id": "docker_compose_docs",
+      "title": "Docker Compose Documentation",
+      "url": "https://docs.docker.com/compose/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "docker-compose.yml defines multi-container applications.",
+        "depends_on with health checks for service ordering.",
+        "volumes for persistent data storage.",
+        "networks for service communication."
+      ],
+      "use_when": [
+        "Writing docker-compose.yml files",
+        "Configuring service dependencies",
+        "Setting up volumes and networks"
+      ]
+    },
+    {
+      "id": "orbstack_docs",
+      "title": "OrbStack Documentation",
+      "url": "https://docs.orbstack.dev/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "OrbStack provides fast Docker Desktop alternative for macOS.",
+        "Supports Docker Compose and Kubernetes.",
+        "Native macOS integration with better performance."
+      ],
+      "use_when": [
+        "Deploying containers on macOS",
+        "Optimizing Docker performance on Mac",
+        "Setting up homelab environments"
+      ]
+    },
+    {
+      "id": "mcp_docs",
+      "title": "Model Context Protocol Documentation",
+      "url": "https://modelcontextprotocol.io/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "MCP enables AI assistants to interact with external tools.",
+        "MCP servers expose tools via standardized protocol.",
+        "Supports resources, prompts, and tools.",
+        "JSON-RPC over stdio, SSE, or HTTP."
+      ],
+      "use_when": [
+        "Integrating MCP servers",
+        "Building MCP tools",
+        "Connecting AI assistants to external services",
+        "Implementing MCP protocol"
+      ]
+    },
+    {
+      "id": "github_docs",
+      "title": "GitHub Documentation",
+      "url": "https://docs.github.com/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "GitHub provides version control and collaboration.",
+        ".gitignore for excluding files from version control.",
+        "GitHub Actions for CI/CD workflows.",
+        "Pull requests and code review workflows."
+      ],
+      "use_when": [
+        "Setting up version control",
+        "Configuring .gitignore",
+        "Setting up CI/CD pipelines",
+        "Managing code collaboration"
+      ]
+    },
+    {
+      "id": "python_docs",
+      "title": "Python Documentation",
+      "url": "https://docs.python.org/3/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Python 3.12+ recommended for modern projects.",
+        "Type hints for better code quality.",
+        "Async/await for concurrent operations.",
+        "Virtual environments for dependency isolation."
+      ],
+      "use_when": [
+        "Writing Python code",
+        "Setting up Python projects",
+        "Understanding Python best practices"
+      ]
+    },
+    {
+      "id": "ruff_docs",
+      "title": "Ruff Documentation",
+      "url": "https://docs.astral.sh/ruff/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Ruff is the fastest Python linter and formatter.",
+        "Replaces Black, isort, flake8, and more.",
+        "Configurable via pyproject.toml or ruff.toml.",
+        "120 character line length is common default."
+      ],
+      "use_when": [
+        "Setting up Python linting and formatting",
+        "Configuring code quality tools",
+        "Replacing legacy Python tooling"
+      ]
+    },
+    {
+      "id": "mypy_docs",
+      "title": "MyPy Documentation",
+      "url": "https://mypy.readthedocs.io/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "MyPy provides static type checking for Python.",
+        "Type hints improve code quality and IDE support.",
+        "Strict mode recommended for new projects.",
+        "Configurable via mypy.ini or pyproject.toml."
+      ],
+      "use_when": [
+        "Setting up Python type checking",
+        "Improving code quality with types",
+        "Configuring type checking in CI/CD"
+      ]
+    },
+    {
+      "id": "supabase_docs",
+      "title": "Supabase Documentation",
+      "url": "https://supabase.com/docs",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Supabase provides PostgreSQL with real-time and auth.",
+        "Self-hosted option available via Docker Compose.",
+        "PGVector extension for vector similarity search.",
+        "Row Level Security (RLS) for data access control."
+      ],
+      "use_when": [
+        "Setting up Supabase database",
+        "Configuring self-hosted Supabase",
+        "Implementing vector search",
+        "Setting up authentication"
+      ]
+    },
+    {
+      "id": "pytest_docs",
+      "title": "Pytest Documentation",
+      "url": "https://docs.pytest.org/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Pytest is the standard Python testing framework.",
+        "Fixtures for test setup and teardown.",
+        "Parametrized tests for multiple scenarios.",
+        "Coverage reporting with pytest-cov."
+      ],
+      "use_when": [
+        "Writing Python tests",
+        "Setting up test infrastructure",
+        "Configuring test coverage"
+      ]
+    },
+    {
+      "id": "vitest_docs",
+      "title": "Vitest Documentation",
+      "url": "https://vitest.dev/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Vitest is fast Vite-native test runner.",
+        "Compatible with Jest API.",
+        "Built-in TypeScript support.",
+        "Watch mode for rapid test development."
+      ],
+      "use_when": [
+        "Setting up frontend testing",
+        "Testing React/Vue components",
+        "Configuring test runners for Vite projects"
+      ]
+    },
+    {
+      "id": "typescript_docs",
+      "title": "TypeScript Documentation",
+      "url": "https://www.typescriptlang.org/docs/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "TypeScript adds static typing to JavaScript.",
+        "Strict mode recommended for type safety.",
+        "tsconfig.json for compiler configuration.",
+        "Type inference reduces need for explicit types."
+      ],
+      "use_when": [
+        "Writing TypeScript code",
+        "Configuring TypeScript projects",
+        "Understanding type system"
+      ]
+    },
+    {
+      "id": "react_docs",
+      "title": "React Documentation",
+      "url": "https://react.dev/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "React 18+ uses functional components and hooks.",
+        "TanStack Query recommended for data fetching.",
+        "Vertical slice architecture recommended for features.",
+        "No prop drilling - use Context or TanStack Query."
+      ],
+      "use_when": [
+        "Building React components",
+        "Setting up data fetching patterns",
+        "Organizing feature structure"
+      ]
+    },
+    {
+      "id": "vite_docs",
+      "title": "Vite Documentation",
+      "url": "https://vite.dev/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Vite provides fast development server and build tool.",
+        "Hot Module Replacement (HMR) for instant updates.",
+        "Plugin ecosystem for framework support.",
+        "Optimized production builds."
+      ],
+      "use_when": [
+        "Setting up frontend build tooling",
+        "Configuring development server",
+        "Optimizing build performance"
+      ]
+    },
+    {
+      "id": "eslint_docs",
+      "title": "ESLint Documentation",
+      "url": "https://eslint.org/docs/latest/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "ESLint finds and fixes JavaScript/TypeScript problems.",
+        "Configurable rules and plugins.",
+        ".eslintrc.json or eslint.config.js for configuration.",
+        "Prettier integration for formatting."
+      ],
+      "use_when": [
+        "Setting up JavaScript/TypeScript linting",
+        "Configuring code quality rules",
+        "Integrating with Prettier"
+      ]
+    },
+    {
+      "id": "biome_docs",
+      "title": "Biome Documentation",
+      "url": "https://biomejs.dev/",
+      "type": "official_docs",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Biome is fast formatter and linter for web projects.",
+        "Replaces Prettier and ESLint for formatting.",
+        "Written in Rust for performance.",
+        "120 character line length default."
+      ],
+      "use_when": [
+        "Setting up modern frontend tooling",
+        "Replacing Prettier/ESLint with Biome",
+        "Optimizing frontend build performance"
+      ]
+    },
+    {
+      "id": "project_scaffolding_standards",
+      "title": "Project Scaffolding Standards",
+      "url": "https://github.com/github/gitignore",
+      "type": "best_practices",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Vertical slice architecture: features own their sub-features.",
+        "Feature-based organization: group by feature, not by type.",
+        "Separation of concerns: UI, business logic, data access layers.",
+        "Clear directory structure improves maintainability."
+      ],
+      "use_when": [
+        "Organizing project structure",
+        "Deciding on architecture patterns",
+        "Setting up new projects"
+      ]
+    },
+    {
+      "id": "file_generation_discipline",
+      "title": "File Generation Discipline (YAGNI)",
+      "url": "https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it",
+      "type": "best_practices",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "YAGNI: You Aren't Gonna Need It - don't create files unless required.",
+        "Always check for existing files before creating new ones.",
+        "Update existing files instead of creating duplicates.",
+        "Generated files should go in .cursor/tmp/ or tmp/ directories."
+      ],
+      "use_when": [
+        "Deciding whether to create a new file",
+        "Organizing generated artifacts",
+        "Following zero-assumption principles"
+      ]
+    },
+    {
+      "id": "sdd_software_design_document",
+      "title": "Software Design Document (SDD) Standards",
+      "url": "https://en.wikipedia.org/wiki/Software_design_document",
+      "type": "best_practices",
+      "trust_level": "medium",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "SDD documents system architecture and design decisions.",
+        "Should include: architecture, components, interfaces, data models.",
+        "Living document updated as system evolves.",
+        "Helps maintain consistency across team."
+      ],
+      "use_when": [
+        "Documenting system architecture",
+        "Making design decisions",
+        "Onboarding new team members"
+      ]
+    },
+    {
+      "id": "tdd_test_driven_development",
+      "title": "Test-Driven Development (TDD)",
+      "url": "https://en.wikipedia.org/wiki/Test-driven_development",
+      "type": "best_practices",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "TDD: Write tests before implementation (Red-Green-Refactor).",
+        "Tests drive design and ensure correctness.",
+        "High test coverage improves code quality.",
+        "Unit tests, integration tests, and E2E tests serve different purposes."
+      ],
+      "use_when": [
+        "Setting up testing strategy",
+        "Writing new features",
+        "Refactoring existing code"
+      ]
+    },
+    {
+      "id": "agile_methodology",
+      "title": "Agile Methodology",
+      "url": "https://agilemanifesto.org/",
+      "type": "best_practices",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Agile emphasizes individuals, working software, customer collaboration, responding to change.",
+        "Iterative development with short sprints.",
+        "Continuous improvement through retrospectives.",
+        "User stories and acceptance criteria guide development."
+      ],
+      "use_when": [
+        "Planning development sprints",
+        "Organizing work into user stories",
+        "Conducting retrospectives"
+      ]
+    },
+    {
+      "id": "project_management",
+      "title": "Project Management Best Practices",
+      "url": "https://www.pmi.org/",
+      "type": "best_practices",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "Clear requirements and acceptance criteria prevent scope creep.",
+        "Break large tasks into smaller, manageable pieces.",
+        "Regular communication and status updates keep projects on track.",
+        "Risk management identifies and mitigates potential issues early."
+      ],
+      "use_when": [
+        "Planning project scope",
+        "Breaking down tasks",
+        "Managing project risks"
+      ]
+    },
+    {
+      "id": "agents_md_documentation",
+      "title": "AGENTS.md Documentation Pattern",
+      "url": "https://docs.cursor.com/context/rules",
+      "type": "best_practices",
+      "trust_level": "high",
+      "retrieved_at": "<PLACEHOLDER: DATE>",
+      "key_facts": [
+        "AGENTS.md provides configuration guide for AI agents.",
+        "Documents MCP integration, available tools, workflows.",
+        "Includes troubleshooting and best practices.",
+        "Alternative to .cursor/rules for simpler projects."
+      ],
+      "use_when": [
+        "Creating agent configuration documentation",
+        "Documenting MCP server integration",
+        "Providing agent workflow guidelines"
+      ]
+    }
+  ]
+}
+
